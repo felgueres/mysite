@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { cloneElement } from "react";
-import { Icons } from "./constants";
+import { Icons } from "../../constants";
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -20,12 +20,12 @@ const ProjectBlock: React.FC<ProjectProps> = ({ title, description, links }) => 
         <h4 className="font-medium underline-offset-4">{title}</h4>
         {links.map((link, index) => (
           // Using index as a key here is generally fine as the list is static and order won't change
-          <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 text-sm">
+          <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
             {link.label}
           </a>
         ))}
       </div>
-      <p className="text-slate-400">{description}</p>
+      <p className="">{description}</p>
     </div>
   );
 };
@@ -34,36 +34,40 @@ const ProjectBlock: React.FC<ProjectProps> = ({ title, description, links }) => 
 export default function Home() {
   return (
     <main className={`flex min-h-screen flex-col p-4 ${inter.className}`}>
-      <h1 className="text-lg font-medium">pablo felgueres // engineering & design</h1>
+      <h1 className="text-lg font-medium">pablo felgueres // engineering </h1>
       <br />
-      <div className="text-md text-lg font-mono text-zinc-100">projects</div>
+      <div className="flex gap-3">
+        <div className="text-md text-lg font-mono underline">projects</div>
+        <Link href='/blog' className="text-md text-lg font-mono flex gap-1 items-center ">
+          blog
+        </Link>
+        <a href='https://github.com/felgueres' target="_blank" rel='noopener noreferrer' className="text-md text-lg font-mono flex gap-1 items-center ">
+          github
+        </a>
+      </div>
       <br />
       <div className="flex flex-col gap-3">
         <ProjectBlock
           title="Street Cleaning Parking (2024)"
           description="Prevent street cleaning parking tickets in San Francisco."
           links={[
-            { href: "https://streetcleaningparking.com", label: "[site]" },
-            { href: "https://www.reddit.com/r/sanfrancisco/comments/18lpar3/made_an_app_that_reminds_you_to_move_your_car/", label: "[reddit]" },
+            { href: "https://streetcleaningparking.com", label: "[link]" },
+            // { href: "https://www.reddit.com/r/sanfrancisco/comments/18lpar3/made_an_app_that_reminds_you_to_move_your_car/", label: "[reddit]" },
           ]}
         />
         <ProjectBlock
-          title="LLM with tools (2023)"
+          title="Widget queries (2023)"
           description="Answer queries using llm classifiers and widgets. Productized at Perplexity AI."
-          links={[{ href: "https://perplexity.ai/search?q=weather+in+sf", label: "[example]" },
+          links={[{ href: "https://perplexity.ai/search?q=weather+in+sf", label: "[link]" },
           ]}
         />
         <ProjectBlock
           title="Upstream (2023)"
-          description="AI answers for any site. Top 10 launch on product hunt, ~700 active users at peak."
+          description="AI answers for any site, ran for 6 months with ~700 active users at peak. Top 10 product of the day."
           links={[
-            { href: "https://www.producthunt.com/products/upstream-2#upstream-3", label: "[product hunt]" },
+            { href: "https://www.producthunt.com/products/upstream-2#upstream-3", label: "[link]" },
           ]}
         />
-        <br />
-        <Link href='/blog' className="text-md text-lg font-mono text-zinc-100 flex gap-1 items-center">
-          blog {cloneElement(Icons.open_new, { className: 'w-5 h-5 fill-current' })}
-        </Link>
       </div>
     </main>
   );
