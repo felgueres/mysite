@@ -61,7 +61,7 @@ export default function Home() {
           title="Street Cleaning Parking (2024)"
           description="Avoid parking tickets in San Francisco."
           layout="h"
-          features="Autodetects cleaning schedules from geo-based lines, Calendar and SMS integrations, Custom push notifications"
+          features="Detects cleaning schedules from geo-based street lines, Calendar and SMS integration, Custom push notifications"
           links={[
             { href: "https://streetcleaningparking.com", label: "[link]" },
           ]}
@@ -69,7 +69,7 @@ export default function Home() {
         />
         <ProjectBlock
           title="AI Answers with widgets (2023)"
-          description="Combine RAG with widgets to answer user queries quickly."
+          description="Combine RAG with widgets to answer queries."
           features="Intent-based query classification, RAG-generated content, Productized at Perplexity AI"
           links={[{ href: "https://perplexity.ai/search?q=weather+in+sf", label: "[link]" },
           ]}
@@ -77,7 +77,7 @@ export default function Home() {
         />
         <ProjectBlock
           title="LLM playground (2023)"
-          description="Tools to run quick language tasks on user content."
+          description="Tools to run language tasks on user content."
           features="Chrome extension to quickly summarize sites, Headless browsing to crawl websites, Speech recognition to transcribe user videos, Single-line of code embeddable widget, Top 10 product of the day on Product Hunt with 700 active users"
           links={[
             { href: "https://www.producthunt.com/products/upstream-2#upstream-3", label: "[link]" },
