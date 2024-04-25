@@ -78,7 +78,7 @@ export default function Home() {
         <ProjectBlock
           title="LLM playground (2023)"
           description="Tools to run language tasks on user content."
-          features="Chrome extension to quickly summarize sites, Headless browsing to crawl websites, Speech recognition to transcribe user videos, Single-line of code embeddable widget, Top 10 product of the day on Product Hunt with 700 active users"
+          features="Multi-turn conversations with citations and chat history, Chrome extension to summarize sites, Headless browsing to crawl sites, Speech recognition models to transcribe user videos, Single-line of code embeddable widget, Top 10 product of the day on Product Hunt with 700 active users"
           links={[
             { href: "https://www.producthunt.com/products/upstream-2#upstream-3", label: "[link]" },
           ]}
