@@ -32,10 +32,10 @@ const ProjectBlock: React.FC<ProjectProps> = ({ title, description, links, imgs}
       </div>
       <p className="">{description}</p>
       <div className="flex gap-0"> { imgs?.map((v,ix)=> v.is_video ? <>
-      <video width={v.dims[0]} controls>
+      <video key={v.path} width={v.dims[0]} controls>
         <source src={v.path} type="video/mp4"></source>
       </video>
-      </> : <Image width={v.dims[0]} height={v.dims[1]} alt='ios scp' src={v.path} /> )}  </div>
+      </> : <Image key={v.path} width={v.dims[0]} height={v.dims[1]} alt='ios scp' src={v.path} /> )}  </div>
     </div>)
 };
 
