@@ -15,16 +15,16 @@ type ProjectProps = {
   links: { href: string; label: string }[];
   imgs?: img[] 
   layout?: string;
-  features: string;
+  features?: string;
 };
 
 const ProjectBlock: React.FC<ProjectProps> = ({ title, description, links, imgs, layout, features }) => {
   return (
     <div className="gap-2 flex flex-col">
-      <div className="flex gap-2 items-center bg-orange-100">
-        <h4 className="font-semibold underline-offset-4 ">{title}</h4>
+      <div className="flex gap-2 items-center bg-orange-00">
+        <h4 className="font-semibold underline-offset-4 bg-orange-100">{title}</h4>
         {links.map((link, index) => (
-          <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
+          <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" className="">
             {link.label}
           </a>
         ))}
@@ -43,7 +43,7 @@ const ProjectBlock: React.FC<ProjectProps> = ({ title, description, links, imgs,
 
 export default function Home() {
   return (
-    <main className={`flex min-h-screen flex-col p-4  max-w-screen-md ${inter.className}`}>
+    <main className={`flex min-h-screen flex-col p-4  max-w-screen-sm ${inter.className}`}>
       <h1 className="text-lg font-medium">pablo felgueres // product engineering </h1>
       <br />
       <div className="flex gap-3">
@@ -59,7 +59,7 @@ export default function Home() {
       <div className="flex flex-col gap-3">
         <ProjectBlock
           title="Street Cleaning Parking (2024)"
-          description="Avoid parking tickets in San Francisco."
+          description="Simplify parking in San Francisco."
           layout="h"
           features="Detects cleaning schedules from geo-based street lines, Calendar and SMS integration, Custom push notifications"
           links={[
@@ -70,7 +70,7 @@ export default function Home() {
         <ProjectBlock
           title="AI Answers with widgets (2023)"
           description="Combine RAG with widgets to answer queries."
-          features="Intent-based query classification, RAG-generated content, Productized at Perplexity AI"
+          features="LLM-based query classifiers, Productized at Perplexity AI"
           links={[{ href: "https://perplexity.ai/search?q=weather+in+sf", label: "[link]" },
           ]}
           imgs={[{'path': '/2/1.png', 'dims': [500,300]} as img]}
@@ -78,7 +78,7 @@ export default function Home() {
         <ProjectBlock
           title="LLM playground (2023)"
           description="Tools to run language tasks on user content."
-          features="Multi-turn conversations with citations and chat history, Chrome extension to summarize sites, Headless browsing to crawl sites, Speech recognition models to transcribe user videos, Single-line of code embeddable widget, Top 10 product of the day on Product Hunt with 700 active users"
+          features="Top 10 product of the day on Product Hunt with 700 active users, Multi-turn conversations with citations and chat history, Headless browsing to crawl sites, Speech recognition models to transcribe user videos"
           links={[
             { href: "https://www.producthunt.com/products/upstream-2#upstream-3", label: "[link]" },
           ]}
@@ -98,6 +98,14 @@ export default function Home() {
           ]}
           imgs={[
             {'path': '/4/1.mp4', 'dims': [500,400], 'is_video': true} as img,
+          ]}
+        />
+        <ProjectBlock
+          title="Ask realestate (2024)"
+          description="Prototype exploring properties with LLMs"
+          links={[ { href: "https://www.reddit.com/r/sanfrancisco/comments/1ae3d31/made_an_app_that_lets_you_ask_questions_about_any", label: "[link]" }, ]}
+          imgs={[
+            {'path': '/5/1.mp4', 'dims': [500,400], 'is_video': true} as img,
           ]}
         />
       </div>
