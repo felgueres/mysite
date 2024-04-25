@@ -68,8 +68,8 @@ export default function Home() {
           imgs={[{'path': '/1/1.png', 'dims': [180,200]} as img, {'path': '/1/2.png', 'dims': [180,200]} as img]}
         />
         <ProjectBlock
-          title="Answers-engine with widgets (2023)"
-          description="Combine retrieval augmented generation with widgets to give quick answers."
+          title="AI Answers with widgets (2023)"
+          description="Combine RAG with widgets to answer user queries quickly."
           features="Intent-based query classification, RAG-generated content, Productized at Perplexity AI"
           links={[{ href: "https://perplexity.ai/search?q=weather+in+sf", label: "[link]" },
           ]}
