@@ -30,7 +30,7 @@ const ProjectBlock: React.FC<ProjectProps> = ({ title, description, links, imgs,
         ))}
       </div>
       <p className="">{description}</p>
-      <ul className="text-sm list-disc list-inside">
+      <ul className="list-disc list-inside">
         {features?.split(', ').map((str, ix) => <li key={ix}>{str}</li>)}
       </ul>
       <div className={`flex gap-1 ${layout === 'h' ? 'flex-row' : 'flex-col'}`}> {imgs?.map((v, ix) => v.is_video ? <>
@@ -41,49 +41,44 @@ const ProjectBlock: React.FC<ProjectProps> = ({ title, description, links, imgs,
     </div>)
 };
 
+const Menu: React.FC<{}> = () => {
+  return (<>
+    <div className="flex gap-3 py-3 border-t border-black">
+      <div className="text-md text-lg font-mono underline cursor-pointer">projects</div>
+      <a href='/2024_pablo.pdf' target="_blank" rel='noopener noreferrer' className="text-md text-lg font-mono flex gap-1 items-center hover:underline"> resume </a>
+      <Link href='/blog' className="text-md text-lg font-mono flex gap-1 items-center hover:underline"> blog </Link>
+      <a href='https://www.goodreads.com/review/list/72122998?shelf=%23ALL%23' target="_blank" rel='noopener noreferrer' className="text-md text-lg font-mono flex gap-1 items-center hover:underline"> bookshelf </a>
+    </div>
+  </>)
+}
+
 export default function Home() {
   return (
-    <main className={`flex min-h-screen flex-col p-4  max-w-3xl ${inter.className} mx-auto border border-black`}>
-      <div className="flex gap-2">
-        <Image key='pfp' width={130} height={130} alt='pfp' src='/pfp.jpg' className="self-start" />
+    <main className={`flex min-h-screen flex-col p-2 mt-4 max-w-3xl ${inter.className} mx-auto`}>
+      <div className="flex py-3">
         <div className="flex flex-col">
-          <span className="text-lg font-medium">Pablo Felgueres </span>
+          <span className="text-xl font-medium mb-2">Pablo Felgueres </span>
           <p className="">
-            Software engineer living in San Francisco. I&apos;ve worked on ML systems and recently building new interfaces for language models.
+            Software engineer living in San Francisco. I&apos;ve worked on ML systems and new interfaces for language models.
             <br />
             <br />
-            I enjoy work that involves technical depth and simplification.
+            In my free time I enjoy reading - lately bios of great adventurers and US history.
+            I&apos;m a regular open water swimmer in the bay.
             <br />
             <br />
-            In my free time I enjoy reading US history, introductory textbooks, and biographies of ambitious people.
-            I&apos;m a regular open water swimmer in the bay and I&apos;m excited about doing longer swims.
-            <br />
-            <br />
-            Email: <a className="hover:underline" href="mailto:pablofelgueres@gmail.com">pablofelgueres@gmail.com</a>
-            <blockquote className="blockquote">
+            <span className="blockquote">
               Most people don&apos;t think simple enough - Jim Keller
-            </blockquote>
+            </span>
           </p>
+          <div className="my-2" />
+          <a className="hover:underline" href="mailto:pablofelgueres@gmail.com">Email: pablofelgueres@gmail.com</a>
+          <a target="_blank" rel="noopener noreferrer" className="hover:underline" href="https://github.com/felgueres">@felgueres on Github</a>
+          <a target="_blank" rel="noopener noreferrer" className="hover:underline" href="https://twitter.com/pfelgueres">@pfelgueres on X</a>
         </div>
+        <Image key='pfp' width={130} height={130} alt='pfp' src='/pfp.jpg' className="self-start" />
       </div>
-      <br />
-      <div className="flex gap-3">
-        <div className="text-md text-lg font-mono underline">projects</div>
-        <Link href='/blog' className="text-md text-lg font-mono flex gap-1 items-center hover:underline">
-          blog
-        </Link>
-        <a href='/2024_pablo.pdf' target="_blank" rel='noopener noreferrer' className="text-md text-lg font-mono flex gap-1 items-center hover:underline">
-          resume
-        </a>
-        <a href='https://github.com/felgueres' target="_blank" rel='noopener noreferrer' className="text-md text-lg font-mono flex gap-1 items-center hover:underline">
-          github
-        </a>
-        <a href='https://www.goodreads.com/review/list/72122998?shelf=%23ALL%23' target="_blank" rel='noopener noreferrer' className="text-md text-lg font-mono flex gap-1 items-center hover:underline">
-          bookshelf
-        </a>
-      </div>
-      <br />
-      <div className="flex flex-col gap-3">
+      <Menu />
+      <div className="flex flex-col gap-3 mt-3">
         <ProjectBlock
           title="Street Cleaning Parking (2024)"
           description="Simplify parking in San Francisco."
