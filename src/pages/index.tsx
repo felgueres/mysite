@@ -52,7 +52,7 @@ export default function Home() {
             Software engineer living in San Francisco. I&apos;ve worked on ML systems and recently building new interfaces for language models.
             <br />
             <br />
-            I enjoy understanding things in depth but also getting things done and designing tasteful products.
+            I enjoy understanding things in depth and designing tasteful products.
             <br />
             <br />
             In my free time I enjoy reading US history, introductory textbooks, and biographies of ambitious people.
@@ -69,7 +69,7 @@ export default function Home() {
       <br />
       <div className="flex gap-3">
         <div className="text-md text-lg font-mono underline">projects</div>
-        <Link href='/blog' className="text-md text-lg font-mono flex gap-1 items-center ">
+        <Link href='/blog' className="text-md text-lg font-mono flex gap-1 items-center hover:underline">
           blog
         </Link>
         <a href='/2024_pablo.pdf' target="_blank" rel='noopener noreferrer' className="text-md text-lg font-mono flex gap-1 items-center hover:underline">
