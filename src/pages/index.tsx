@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 type img = {
   path: string;
-  dims: [number,number];
+  dims: [number, number];
   is_video?: boolean
 }
 
@@ -13,7 +13,7 @@ type ProjectProps = {
   title: string;
   description: string;
   links: { href: string; label: string }[];
-  imgs?: img[] 
+  imgs?: img[]
   layout?: string;
   features?: string;
 };
@@ -31,28 +31,55 @@ const ProjectBlock: React.FC<ProjectProps> = ({ title, description, links, imgs,
       </div>
       <p className="">{description}</p>
       <ul className="text-sm list-disc list-inside">
-        {features?.split(', ').map((str, ix)=> <li key={ix}>{str}</li>)}
+        {features?.split(', ').map((str, ix) => <li key={ix}>{str}</li>)}
       </ul>
-      <div className={`flex gap-1 ${layout==='h'? 'flex-row': 'flex-col'}`}> { imgs?.map((v,ix)=> v.is_video ? <>
-      <video key={v.path} width={v.dims[0]} controls>
-        <source src={v.path} type="video/mp4"></source>
-      </video>
-      </> : <Image key={v.path} width={v.dims[0]} height={v.dims[1]} alt='ios scp' src={v.path} /> )}  </div>
+      <div className={`flex gap-1 ${layout === 'h' ? 'flex-row' : 'flex-col'}`}> {imgs?.map((v, ix) => v.is_video ? <>
+        <video key={v.path} width={v.dims[0]} controls>
+          <source src={v.path} type="video/mp4"></source>
+        </video>
+      </> : <Image key={v.path} width={v.dims[0]} height={v.dims[1]} alt='ios scp' src={v.path} />)}  </div>
     </div>)
 };
 
 export default function Home() {
   return (
-    <main className={`flex min-h-screen flex-col p-4  max-w-screen-sm ${inter.className}`}>
-      <h1 className="text-lg font-medium">pablo felgueres // product engineering </h1>
+    <main className={`flex min-h-screen flex-col p-4  max-w-3xl ${inter.className} mx-auto border border-black`}>
+      <div className="flex gap-2">
+        <Image key='pfp' width={130} height={130} alt='pfp' src='/pfp.jpg' className="self-start" />
+        <div className="flex flex-col">
+          <span className="text-lg font-medium">Pablo Felgueres </span>
+          <p className="">
+            Software engineer living in San Francisco. I&apos;ve worked on ML systems and recently building new interfaces for language models.
+            <br />
+            <br />
+            I enjoy understanding things in depth but also getting things done and designing tasteful products.
+            <br />
+            <br />
+            In my free time I enjoy reading US history, introductory textbooks, and biographies of ambitious people.
+            I&apos;m a regular open water swimmer in the bay and I&apos;m excited about doing longer swims.
+            <br />
+            <br />
+            Email: <a className="hover:underline" href="mailto:pablofelgueres@gmail.com">pablofelgueres@gmail.com</a>
+            <blockquote className="blockquote">
+              Most people don&apos;t think simple enough - Jim Keller
+            </blockquote>
+          </p>
+        </div>
+      </div>
       <br />
       <div className="flex gap-3">
         <div className="text-md text-lg font-mono underline">projects</div>
         <Link href='/blog' className="text-md text-lg font-mono flex gap-1 items-center ">
           blog
         </Link>
-        <a href='https://github.com/felgueres' target="_blank" rel='noopener noreferrer' className="text-md text-lg font-mono flex gap-1 items-center ">
+        <a href='/2024_pablo.pdf' target="_blank" rel='noopener noreferrer' className="text-md text-lg font-mono flex gap-1 items-center hover:underline">
+          resume
+        </a>
+        <a href='https://github.com/felgueres' target="_blank" rel='noopener noreferrer' className="text-md text-lg font-mono flex gap-1 items-center hover:underline">
           github
+        </a>
+        <a href='https://www.goodreads.com/review/list/72122998?shelf=%23ALL%23' target="_blank" rel='noopener noreferrer' className="text-md text-lg font-mono flex gap-1 items-center hover:underline">
+          bookshelf
         </a>
       </div>
       <br />
@@ -65,7 +92,7 @@ export default function Home() {
           links={[
             { href: "https://streetcleaningparking.com", label: "[link]" },
           ]}
-          imgs={[{'path': '/1/1.png', 'dims': [180,200]} as img, {'path': '/1/2.png', 'dims': [180,200]} as img]}
+          imgs={[{ 'path': '/1/1.png', 'dims': [180, 200] } as img, { 'path': '/1/2.png', 'dims': [180, 200] } as img]}
         />
         <ProjectBlock
           title="AI Answers with widgets (2023)"
@@ -73,7 +100,7 @@ export default function Home() {
           features="LLM-based query classifiers, Productized at Perplexity AI"
           links={[{ href: "https://perplexity.ai/search?q=weather+in+sf", label: "[link]" },
           ]}
-          imgs={[{'path': '/2/1.png', 'dims': [500,300]} as img]}
+          imgs={[{ 'path': '/2/1.png', 'dims': [500, 300] } as img]}
         />
         <ProjectBlock
           title="LLM playground (2023)"
@@ -84,9 +111,9 @@ export default function Home() {
           ]}
           layout=''
           imgs={[
-            {'path': '/3/1.mp4', 'dims': [500,400], 'is_video': true} as img,
-            {'path': '/3/2.png', 'dims': [500,300],} as img,
-            {'path': '/3/3.png', 'dims': [500,300],} as img,
+            { 'path': '/3/1.mp4', 'dims': [500, 400], 'is_video': true } as img,
+            { 'path': '/3/2.png', 'dims': [500, 300], } as img,
+            { 'path': '/3/3.png', 'dims': [500, 300], } as img,
           ]}
         />
         <ProjectBlock
@@ -97,17 +124,10 @@ export default function Home() {
             { href: "", label: "" },
           ]}
           imgs={[
-            {'path': '/4/1.mp4', 'dims': [500,400], 'is_video': true} as img,
+            { 'path': '/4/1.mp4', 'dims': [500, 400], 'is_video': true } as img,
           ]}
         />
-        <ProjectBlock
-          title="Ask realestate (2024)"
-          description="Prototype exploring properties with LLMs"
-          links={[ { href: "https://www.reddit.com/r/sanfrancisco/comments/1ae3d31/made_an_app_that_lets_you_ask_questions_about_any", label: "[link]" }, ]}
-          imgs={[
-            {'path': '/5/1.mp4', 'dims': [500,400], 'is_video': true} as img,
-          ]}
-        />
+
       </div>
     </main>
   );

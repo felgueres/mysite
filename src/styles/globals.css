@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.blockquote {
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    border-left: 4px solid #333;
+    padding-left: 15px;
+    margin: 20px 0;
+    max-width: 600px; /* Optional: Limit the width of the quote */
+    line-height: 1.5; /* Optional: Adjust line height for better readability */
+  }
+  
+  @media (max-width: 768px) {
+    .blockquote {
+      padding-left: 10px; /* Adjust padding for smaller screens */
+    }
+  }
