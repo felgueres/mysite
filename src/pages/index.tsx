@@ -52,7 +52,7 @@ export default function Home() {
             Software engineer living in San Francisco. I&apos;ve worked on ML systems and recently building new interfaces for language models.
             <br />
             <br />
-            I enjoy understanding things in depth and designing tasteful products.
+            I enjoy work that involves technical depth and simplification.
             <br />
             <br />
             In my free time I enjoy reading US history, introductory textbooks, and biographies of ambitious people.
