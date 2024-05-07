@@ -55,15 +55,24 @@ const Menu: React.FC<{}> = () => {
 export default function Home() {
   return (
     <main className={`flex min-h-screen flex-col mt-3 p-2 max-w-3xl ${inter.className} mx-auto`}>
-      <div className="flex flex-col sm:flex-row py-3">
+      <div className="flex flex-col sm:flex-row py-3 gap-5">
         <div className="flex flex-col">
           <span className="text-xl font-medium mb-2">Pablo Felgueres </span>
           <p className="">
-            Software engineer living in San Francisco. I&apos;ve worked on ML systems at Uber, interfaces for language models at Perplexity, and performance simulations for some of largest solar plants in the US.
+            Software engineer living in San Francisco. I&apos;ve worked on ML systems at Uber, interfaces for language models at Perplexity, and performance simulations for some of the largest solar plants in the US.
             <br />
             <br />
-            In 2022 I left my job to learn how to build products fullstack - design, engineering, marketing, and sales. 
-            Highlights have been an LLM playground (top 10 on Product Hunt), a growing app for SF residents to simplify parking (featured on ABC news), and building an engineering community by hosting chats with industry leaders on the future of American manufacturing. 
+            In 2022 I left my job to learn how to build products fullstack - design, engineering, marketing, and sales.
+            Highlights have been an LLM playground {` `} 
+            <a className="hover:underline text-blue-500" href="https://www.producthunt.com/products/upstream-2" target="_blank" rel="noopener noreferrer">
+              (top 10 on Product Hunt)
+            </a>, a growing app for SF residents to simplify parking {` `}
+            <a className="hover:underline text-blue-500" href="https://www.youtube.com/watch?v=dmWlEdJUCL8" target="_blank" rel="noopener noreferrer">
+              (featured on ABC news)
+            </a>, and building an <a className="hover:underline text-blue-500" href="https://industrialdynamism.com" target="_blank" rel="noopener noreferrer">
+             {` `} engineering community {` `}
+            </a>
+            by hosting chats with industry leaders on the future of American manufacturing.
             <br />
             <br />
             In my free time I enjoy reading - lately bios of great adventurers and US history.
@@ -74,7 +83,7 @@ export default function Home() {
           <a target="_blank" rel="noopener noreferrer" className="hover:underline" href="https://github.com/felgueres">@felgueres on Github</a>
           <a target="_blank" rel="noopener noreferrer" className="hover:underline" href="https://twitter.com/pfelgueres">@pfelgueres on X</a>
           <span className="blockquote text-gray-500">
-            Most people don&apos;t think simple enough. <br/> Jim Keller 
+            Most people don&apos;t think simple enough. <br /> Jim Keller
           </span>
         </div>
         <Image key='pfp' width={130} height={130} alt='pfp' src='/pfp.jpg' className="self-start" />
