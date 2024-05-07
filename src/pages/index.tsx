@@ -63,14 +63,14 @@ export default function Home() {
             <br />
             <br />
             In 2022 I left my job to learn how to build products fullstack - design, engineering, marketing, and sales.
-            Highlights have been an LLM playground {` `} 
+            Highlights have been an LLM playground {` `}
             <a className="hover:underline text-blue-500" href="https://www.producthunt.com/products/upstream-2" target="_blank" rel="noopener noreferrer">
               (top 10 on Product Hunt)
             </a>, a growing app for SF residents to simplify parking {` `}
             <a className="hover:underline text-blue-500" href="https://www.youtube.com/watch?v=dmWlEdJUCL8" target="_blank" rel="noopener noreferrer">
               (featured on ABC news)
             </a>, and building an <a className="hover:underline text-blue-500" href="https://industrialdynamism.com" target="_blank" rel="noopener noreferrer">
-             {` `} engineering community {` `}
+              {` `} engineering community {` `}
             </a>
             by hosting chats with industry leaders on the future of American manufacturing.
             <br />
@@ -94,7 +94,7 @@ export default function Home() {
           title="Street Cleaning Parking (2024)"
           description="Simplify parking in San Francisco."
           layout="h"
-          features="Detects cleaning schedules from geo-based street lines, Calendar and SMS integration, Custom push notifications"
+          features="Detects parking rules from geolocation, Simple useful design, Notifications & calendar integrations"
           links={[
             { href: "https://streetcleaningparking.com", label: "[link]" },
           ]}
@@ -107,6 +107,16 @@ export default function Home() {
           links={[{ href: "https://perplexity.ai/search?q=weather+in+sf", label: "[link]" },
           ]}
           imgs={[{ 'path': '/2/1.png', 'dims': [500, 300] } as img]}
+        />
+        <ProjectBlock
+          title="Autodoc (2023)"
+          description="Fast data extraction for document intensive businesses"
+          features="Built for an insurance startup in India (LoopHealth), LLM pipeline "
+          links={[ { href: "", label: "" }, ]}
+          imgs={[
+            { 'path': '/6/1.gif', 'dims': [500, 300], 'is_video': false} as img,
+            { 'path': '/6/2.png', 'dims': [500, 300], 'is_video': false} as img,
+          ]}
         />
         <ProjectBlock
           title="LLM playground (2023)"
