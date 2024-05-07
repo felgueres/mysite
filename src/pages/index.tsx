@@ -62,8 +62,8 @@ export default function Home() {
             Software engineer living in San Francisco. I&apos;ve worked on ML systems at Uber, interfaces for language models at Perplexity, and performance simulations for some of largest solar plants in the US.
             <br />
             <br />
-            In 2022 I left my job to learn how to build products fullstack doing design, engineering, marketing, and sales. 
-            Highlights have been an LLM playground with ~700 active users, a growing app for SF residents with 50+ paying subscribers, and building an engineering community of 300+ members by hosting weekly chats with industry leaders on the future of American manufacturing. 
+            In 2022 I left my job to learn how to build products doing design, engineering, marketing, and sales. 
+            Highlights have been an LLM playground, a growing app for SF residents with 50+ paying subscribers, and building an engineering community by hosting chats with industry leaders on the future of American manufacturing. 
             <br />
             <br />
             In my free time I enjoy reading - lately bios of great adventurers and US history.
