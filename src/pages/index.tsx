@@ -72,7 +72,7 @@ export default function Home() {
             </a>, and building an <a className="hover:underline text-blue-500" href="https://industrialdynamism.com" target="_blank" rel="noopener noreferrer">
               {` `} engineering community {` `}
             </a>
-            by hosting chats with industry leaders on the future of American manufacturing.
+            around the future of American manufacturing.
             <br />
             <br />
             In my free time I enjoy reading - lately bios of great adventurers and US history.
